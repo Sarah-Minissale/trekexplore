@@ -1,0 +1,24 @@
+/* Dimensioni condivise dalla Home e dalle pagine delle destinazioni. */
+#page-header,
+.detail-nav {
+    box-sizing: border-box;
+    height: 60px;
+    min-height: 60px;
+    max-height: 5%;
+    padding: 0 6%;
+}
+
+#page-header > a,
+.detail-nav .brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#page-header .logo,
+.detail-nav .brand img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 60px;
+}
