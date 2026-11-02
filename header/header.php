@@ -1,26 +1,28 @@
-<header class="copertina" id="inizio">
-  <video class="video-sfondo" autoplay loop muted playsinline>
-    <source src="video/videoheader.mp4" type="video/mp4">
-  </video>
+    <video autoplay loop muted playsinline class="background-video">
+      <source
+        src="/trekExplore/video/videoheader.mp4"
+        type="video/mp4" />
+    </video>
 
-  <nav class="barra-menu">
-    <a class="logo" href="index.php">
-      <img src="images/logo-montagna-verde.png" alt="Logo TrekExplore">
-      <span>TrekExplore</span>
-    </a>
+    <header id="page-header">
+      <a href="index.php" aria-label="Torna alla Home Page"
+        ><img src="images/logo-montagna-verde.png" alt="Logo montagna" class="logo"></a>
 
-    <button id="bottone-menu" type="button" aria-label="Apri il menu">☰</button>
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-x" id="close-icon"></i>
+      </label>
 
-    <div class="menu" id="menu">
-      <a href="index.php">Home</a>
-      <a href="#mete">Mete</a>
-      <a href="login/login.php#login">Login</a>
-    </div>
-  </nav>
+      <nav class="navbar">
+        <a href="login/login.php#login" class="nav-item" style="--i: 1">Login</a>
+        <a href="index.php" class="nav-item" style="--i: 0">Home</a>
+       <!--  <a href="#" class="nav-item" style="--i: 2">Esplora Regioni</a> -->
+      </nav>
+    </header>
 
-  <div class="testo-copertina">
-    <h1>TrekExplore</h1>
-    <p>Trova il sentiero giusto per la tua prossima avventura.</p>
-    <a class="bottone-esplora" href="#mete">Esplora le mete</a>
-  </div>
-</header>
+    <section class="content">
+      <h1>TrekExplore</h1>
+      <a id="explore-button" href="#destination-cards" class="btn light" aria-label="Vai alle destinazioni trekking"></a>
+    </section>
+
