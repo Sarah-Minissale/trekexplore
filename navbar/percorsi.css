@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #eef4f2;
+    color: #173f46;
+    font-family: Arial, sans-serif;
+}
+
+.copertina {
+    min-height: 650px;
+    padding: 170px 6% 80px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.montagna {
+    background-image:
+        linear-gradient(rgba(12, 3, 51, 0.7), rgba(12, 3, 51, 0.4)),
+        url("../images/card-trekking-montagna.jpg");
+}
+
+.mare {
+    background-image:
+        linear-gradient(rgba(1, 45, 55, 0.7), rgba(1, 45, 55, 0.4)),
+        url("../images/card-trekking-mare.jpg");
+}
+
+.collina {
+    background-image:
+        linear-gradient(rgba(24, 63, 43, 0.7), rgba(24, 63, 43, 0.4)),
+        url("../images/card-trekking-collina.jpg");
+}
+
+.barra-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 70px;
+    padding: 8px 6%;
+    background-color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #173f46;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 55px;
+    margin-right: 8px;
+}
+
+.torna-indietro {
+    padding: 8px 12px;
+    border: 1px solid #39735d;
+    border-radius: 5px;
+    color: #173f46;
+    text-decoration: none;
+}
+
+.testo-copertina {
+    max-width: 750px;
+}
+
+.testo-copertina h1 {
+    margin: 10px 0 20px;
+    font-size: 60px;
+}
+
+.testo-copertina > p:not(.etichetta) {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.etichetta,
+.etichetta-sezione,
+.regione {
+    color: #a8efff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bottone-principale,
+.link-mappa {
+    display: inline-block;
+    padding: 11px 18px;
+    border-radius: 5px;
+    background-color: #39735d;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.introduzione {
+    display: flex;
+    gap: 40px;
+    padding: 70px 0;
+}
+
+.introduzione > div {
+    width: 65%;
+}
+
+.introduzione aside {
+    width: 35%;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: #dfece8;
+}
+
+.introduzione h2,
+.titolo-percorsi h2 {
+    margin-bottom: 15px;
+    color: #173f46;
+    font-size: 38px;
+}
+
+.introduzione p,
+.introduzione li,
+.titolo-percorsi p,
+.scheda-percorso > p {
+    line-height: 1.7;
+}
+
+.etichetta-sezione,
+.regione {
+    color: #39735d;
+}
+
+.percorsi {
+    padding: 20px 0 80px;
+}
+
+.titolo-percorsi {
+    max-width: 750px;
+    margin-bottom: 30px;
+}
+
+.lista-percorsi {
+    display: flex;
+    gap: 20px;
+}
+
+.scheda-percorso {
+    width: 33.33%;
+    padding: 20px;
+    border: 1px solid #d5e4e0;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.scheda-percorso h3 {
+    min-height: 58px;
+    font-size: 22px;
+}
+
+.scheda-percorso dl {
+    display: flex;
+    gap: 10px;
+}
+
+.scheda-percorso dl div {
+    width: 50%;
+    padding: 10px;
+    background-color: #eef4f2;
+}
+
+.scheda-percorso dt {
+    font-size: 12px;
+}
+
+.scheda-percorso dd {
+    margin: 5px 0 0;
+    font-weight: bold;
+}
+
+.scheda-percorso iframe {
+    width: 100%;
+    height: 230px;
+    margin: 10px 0 15px;
+    border: 0;
+}
+
+.link-mappa {
+    width: 100%;
+    text-align: center;
+}
+
+.avviso {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #dfece8;
+}
+
+.fondo-pagina {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 6%;
+    background-color: #343a40;
+    color: white;
+}
+
+.fondo-pagina p {
+    margin: 0;
+}
+
+.fondo-pagina a {
+    color: #a8efff;
+}
+
+@media (max-width: 800px) {
+    .testo-copertina h1 {
+        font-size: 42px;
+    }
+
+    .introduzione,
+    .lista-percorsi {
+        flex-direction: column;
+    }
+
+    .introduzione > div,
+    .introduzione aside,
+    .scheda-percorso {
+        width: 100%;
+    }
+
+    .scheda-percorso h3 {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo span {
+        display: none;
+    }
+
+    .torna-indietro {
+        font-size: 13px;
+    }
+
+    .fondo-pagina {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
