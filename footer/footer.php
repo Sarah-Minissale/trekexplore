@@ -16,9 +16,14 @@
       <div class="col-md-4 mb-3">
         <h5>Follow Us</h5>
         <ul class="list-inline social-icons">
-          <li class="list-inline-item"><a href="#" class="text-white"><i class="bi bi-facebook"></i></a></li>
-          <li class="list-inline-item"><a href="#" class="text-white" aria-label="Telefono"><i class="bi bi-telephone"></i></a></li>
-          <li class="list-inline-item"><a href="#" class="text-white"><i class="bi bi-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="https://www.facebook.com/login/" class="text-white" aria-label="Accedi a Facebook" target="_blank" rel="noopener noreferrer"><i class="bi bi-facebook"></i></a></li>
+          <li class="list-inline-item telefono-container">
+            <button id="telefono-toggle" class="telefono-button" type="button" aria-label="Mostra il numero di telefono" aria-expanded="false" aria-controls="numero-telefono">
+              <i class="bi bi-telephone"></i>
+            </button>
+            <span id="numero-telefono" class="numero-telefono" hidden>+39 012 345 6789</span>
+          </li>
+          <li class="list-inline-item"><a href="https://www.instagram.com/accounts/login/" class="text-white" aria-label="Accedi a Instagram" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a></li>
         </ul>
       </div>
     </div>

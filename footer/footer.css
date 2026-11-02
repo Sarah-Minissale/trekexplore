@@ -57,6 +57,38 @@
     font-size: 1.25rem;
 }
 
+.site-footer .telefono-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site-footer .telefono-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font: inherit;
+    font-size: 1.25rem;
+    line-height: inherit;
+    cursor: pointer;
+}
+
+.site-footer .telefono-button:hover,
+.site-footer .telefono-button:focus-visible {
+    color: #a8efff;
+}
+
+.site-footer .numero-telefono {
+    margin-top: 0.5rem;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.site-footer .numero-telefono[hidden] {
+    display: none;
+}
+
 .site-footer hr {
     margin: 2rem 0;
     border: 0;
