@@ -9,8 +9,8 @@
         <h5>Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="#" class="text-decoration-none text-white">Home</a></li>
-          <li><a href="#" class="text-decoration-none text-white">Services</a></li>
-          <li><a href="#" class="text-decoration-none text-white">Contact</a></li>
+          <li><a href="login/login.php#login" class="text-decoration-none text-white">Login</a></li>
+          <li><a href="login/login.php#registrazione" class="text-decoration-none text-white">Registrazione</a></li>
         </ul>
       </div>
       <div class="col-md-4 mb-3">
@@ -25,7 +25,7 @@
     <hr class="mb-4">
     <div class="row">
       <div class="col-md-12 text-center">
-        <p>&copy; 2026 Your Company. All rights reserved.</p>
+        <p>&copy; 2026 TrekExplore. All rights reserved.</p>
       </div>
     </div>
   </div>
