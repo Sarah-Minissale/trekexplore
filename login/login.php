@@ -3,162 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="login.css?v=3">
-  <link rel="stylesheet" href="../navbar/navbar.css?v=1">
-  <script src="login.js?v=4" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
   <title>Login e registrazione | TrekExplore</title>
 </head>
 <body>
-  <nav class="detail-nav login-nav" aria-label="Navigazione principale">
-    <a class="brand" href="../index.php" aria-label="Torna alla Home Page">
+  <nav class="barra-login">
+    <a class="logo-login" href="../index.php">
       <img src="../images/logo-montagna-verde.png" alt="Logo TrekExplore">
       <span>TrekExplore</span>
     </a>
-    <a class="back-link" href="../index.php">&larr; Torna alla Home</a>
+    <a class="torna-home" href="../index.php">← Torna alla Home</a>
   </nav>
 
-  <main class="auth-page">
-    <h1 class="visually-hidden">Area personale TrekExplore</h1>
+  <main class="pagina-login">
+    <section class="riquadro-login" id="login">
+      <h1>Accedi</h1>
 
-    <div class="auth-container">
-      <section class="auth-panel" id="login">
-        <h2>Avvia sessione</h2>
+      <form id="modulo-login">
+        <div class="mb-3">
+          <label for="email-login" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email-login" required>
+        </div>
 
-        <form id="login-form" method="post" action="login.php#login">
-          <div class="form-group">
-            <label class="visually-hidden" for="login-email">Email</label>
-            <input
-              type="email"
-              id="login-email"
-              name="login-email"
-              placeholder="E-mail"
-              autocomplete="email"
-              required>
+        <div class="mb-3">
+          <label for="password-login" class="form-label">Password</label>
+          <div class="campo-password">
+            <input type="password" class="form-control" id="password-login" minlength="8" required>
+            <button type="button" id="mostra-password-login">Mostra</button>
           </div>
+        </div>
 
-          <div class="form-group password-field">
-            <label class="visually-hidden" for="login-password">Password</label>
-            <input
-              type="password"
-              id="login-password"
-              name="login-password"
-              placeholder="Password"
-              autocomplete="current-password"
-              minlength="8"
-              required>
-            <button
-              type="button"
-              class="password-button"
-              data-target="login-password"
-              aria-label="Mostra la password">
-              <span aria-hidden="true">&#128065;</span>
-            </button>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="ricordami">
+          <label class="form-check-label" for="ricordami">Mantieni l'accesso</label>
+        </div>
+
+        <p class="messaggio" id="messaggio-login"></p>
+        <button class="btn bottone-principale w-100" type="submit">Accedi</button>
+        <button class="btn bottone-secondario w-100 mt-2" type="button" id="vai-registrazione">Crea account</button>
+      </form>
+    </section>
+
+    <section class="riquadro-login" id="registrazione">
+      <h1>Crea account</h1>
+
+      <form id="modulo-registrazione">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="cognome" class="form-label">Cognome</label>
+          <input type="text" class="form-control" id="cognome" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email-registrazione" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email-registrazione" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password-registrazione" class="form-label">Password</label>
+          <div class="campo-password">
+            <input type="password" class="form-control" id="password-registrazione" minlength="8" required>
+            <button type="button" id="mostra-password-registrazione">Mostra</button>
           </div>
+        </div>
 
-          <label class="checkbox-label session-option">
-            <input type="checkbox" name="remember-me">
-            Mantieni l'accesso
-          </label>
+        <div class="mb-3">
+          <label for="conferma-password" class="form-label">Conferma password</label>
+          <input type="password" class="form-control" id="conferma-password" minlength="8" required>
+        </div>
 
-          <p class="form-message" id="login-message" aria-live="polite"></p>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="termini" required>
+          <label class="form-check-label" for="termini">Accetto i termini e la privacy.</label>
+        </div>
 
-          <button class="primary-button" type="submit">Avvia sessione</button>
-          <button class="secondary-button" type="button" id="show-registration">Crea account</button>
-        </form>
-      </section>
-
-      <section class="auth-panel is-hidden" id="registrazione">
-        <h2>Crea account</h2>
-
-        <form id="registration-form" method="post" action="login.php#registrazione">
-          <div class="form-group">
-            <label class="visually-hidden" for="registration-name">Nome</label>
-            <input
-              type="text"
-              id="registration-name"
-              name="registration-name"
-              placeholder="Nome"
-              autocomplete="given-name"
-              required>
-          </div>
-
-          <div class="form-group">
-            <label class="visually-hidden" for="registration-surname">Cognome</label>
-            <input
-              type="text"
-              id="registration-surname"
-              name="registration-surname"
-              placeholder="Cognome"
-              autocomplete="family-name"
-              required>
-          </div>
-
-          <div class="form-group">
-            <label class="visually-hidden" for="registration-email">Email</label>
-            <input
-              type="email"
-              id="registration-email"
-              name="registration-email"
-              placeholder="E-mail"
-              autocomplete="email"
-              required>
-          </div>
-
-          <div class="form-group password-field">
-            <label class="visually-hidden" for="registration-password">Password</label>
-            <input
-              type="password"
-              id="registration-password"
-              name="registration-password"
-              placeholder="Password - almeno 8 caratteri"
-              autocomplete="new-password"
-              minlength="8"
-              required>
-            <button
-              type="button"
-              class="password-button"
-              data-target="registration-password"
-              aria-label="Mostra la password">
-              <span aria-hidden="true">&#128065;</span>
-            </button>
-          </div>
-
-          <div class="form-group password-field">
-            <label class="visually-hidden" for="registration-confirm-password">Conferma password</label>
-            <input
-              type="password"
-              id="registration-confirm-password"
-              name="registration-confirm-password"
-              placeholder="Conferma password"
-              autocomplete="new-password"
-              minlength="8"
-              required>
-            <button
-              type="button"
-              class="password-button"
-              data-target="registration-confirm-password"
-              aria-label="Mostra la password di conferma">
-              <span aria-hidden="true">&#128065;</span>
-            </button>
-          </div>
-
-          <label class="checkbox-label terms-option">
-            <input type="checkbox" id="accept-terms" name="accept-terms" required>
-            Accetto i termini di utilizzo e l'informativa sulla privacy.
-          </label>
-
-          <p class="form-message" id="registration-message" aria-live="polite"></p>
-
-          <button class="primary-button" type="submit">Crea account</button>
-          <button class="secondary-button" type="button" id="show-login">Torna al login</button>
-        </form>
-      </section>
-    </div>
+        <p class="messaggio" id="messaggio-registrazione"></p>
+        <button class="btn bottone-principale w-100" type="submit">Registrati</button>
+        <button class="btn bottone-secondario w-100 mt-2" type="button" id="vai-login">Torna al login</button>
+      </form>
+    </section>
   </main>
 
-  <footer class="login-footer">
-    <p>&copy; 2026 TrekExplore</p>
-    <a href="../index.php">Torna alle destinazioni</a>
+  <footer class="fondo-login">
+    <p>© 2026 TrekExplore</p>
   </footer>
 </body>
 </html>

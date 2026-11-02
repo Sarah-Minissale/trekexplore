@@ -1,107 +1,53 @@
-.site-footer {
+.fondo-sito {
+    padding: 50px 0 25px;
     background-color: #343a40;
-    color: #fff;
-    padding: 3rem 0;
+    color: white;
 }
 
-.site-footer .container {
-    width: min(90%, 1200px);
-    margin: 0 auto;
+.fondo-sito h5 {
+    margin-bottom: 15px;
 }
 
-.site-footer .row {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
-}
-
-.site-footer h5 {
-    margin: 0 0 1rem;
-    font-size: 1.1rem;
-}
-
-.site-footer p {
-    margin: 0;
-    line-height: 1.7;
-}
-
-.site-footer ul {
-    margin: 0;
+.fondo-sito ul {
     padding: 0;
     list-style: none;
 }
 
-.site-footer li + li {
-    margin-top: 0.6rem;
+.fondo-sito li {
+    margin-bottom: 8px;
 }
 
-.site-footer a {
-    color: #fff;
-    text-decoration: none;
+.fondo-sito a {
+    color: white;
 }
 
-.site-footer a:hover {
-    color: #a8efff;
-}
-
-.site-footer .social-icons {
+.icone-social {
     display: flex;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 18px;
+    font-size: 22px;
 }
 
-.site-footer .social-icons li {
-    margin: 0;
-}
-
-.site-footer .social-icons a {
-    font-size: 1.25rem;
-}
-
-.site-footer .telefono-container {
+.zona-telefono {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-.site-footer .telefono-button {
-    padding: 0;
+.bottone-telefono {
     border: 0;
-    background: transparent;
-    color: #fff;
-    font: inherit;
-    font-size: 1.25rem;
-    line-height: inherit;
-    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
 }
 
-.site-footer .telefono-button:hover,
-.site-footer .telefono-button:focus-visible {
-    color: #a8efff;
-}
-
-.site-footer .numero-telefono {
-    margin-top: 0.5rem;
-    white-space: nowrap;
-    font-size: 0.9rem;
-}
-
-.site-footer .numero-telefono[hidden] {
+#numero-telefono {
     display: none;
+    margin-top: 5px;
+    font-size: 14px;
+    white-space: nowrap;
 }
 
-.site-footer hr {
-    margin: 2rem 0;
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.site-footer .col-md-12 {
-    grid-column: 1 / -1;
-    text-align: center;
-}
-
-@media (max-width: 700px) {
-    .site-footer .row {
-        grid-template-columns: 1fr;
-    }
+.fondo-sito hr {
+    margin: 25px 0;
+    border-color: white;
 }

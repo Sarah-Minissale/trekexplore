@@ -3,34 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="mare.css?v=3">
-  <link rel="stylesheet" href="../navbar/navbar.css?v=1">
-  <script src="mare.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../navbar/percorsi.css">
   <title>Cammino delle Scogliere | TrekExplore</title>
 </head>
 <body>
-  <header class="detail-hero" id="top">
-    <nav class="detail-nav" aria-label="Navigazione principale">
-      <a class="brand" href="../index.php">
+  <header class="copertina mare" id="inizio">
+    <nav class="barra-menu" aria-label="Navigazione principale">
+      <a class="logo" href="../index.php">
         <img src="../images/logo-montagna-verde.png" alt="Logo TrekExplore">
         <span>TrekExplore</span>
       </a>
-      <a class="back-link" href="../index.php#destination-cards">&larr; Tutte le mete</a>
+      <a class="torna-indietro" href="../index.php#mete">&larr; Tutte le mete</a>
     </nav>
 
-    <div class="hero-content">
-      <p class="eyebrow">Trekking sul mare</p>
+    <div class="testo-copertina">
+      <p class="etichetta">Trekking sul mare</p>
       <h1>Cammino delle Scogliere</h1>
       <p>Un sentiero mediterraneo sospeso tra rocce, profumi e acqua cristallina.</p>
-      <a class="primary-link" href="#tre_percorsi">Scopri il percorso</a>
+      <a class="bottone-principale" href="#tre-percorsi">Scopri il percorso</a>
     </div>
   </header>
 
   <main id="percorso">
 
-    <section class="route-intro">
+    <section class="introduzione">
       <div>
-        <p class="section-label">L'esperienza</p>
+        <p class="etichetta-sezione">L'esperienza</p>
         <h2>Passo dopo passo verso il blu</h2>
         <p>Il percorso segue la costa alternando tratti rocciosi, piccole baie e macchia mediterranea. Le vedute sul mare accompagnano l'intera escursione.</p>
       </div>
@@ -45,16 +44,16 @@
       </aside>
     </section>
 
-    <section class="regional-routes" aria-labelledby="regional-routes-title">
-      <div class="regional-routes-heading">
-        <p class="section-label">Dove camminare in Italia</p>
-        <h2 id="regional-routes-title">Tre regioni, tre percorsi sul mare</h2>
-        <p id="tre_percorsi"> Scopri tre itinerari costieri tra borghi, scogliere e natura mediterranea.</p>
+    <section class="percorsi" aria-labelledby="titolo-percorsi">
+      <div class="titolo-percorsi">
+        <p class="etichetta-sezione">Dove camminare in Italia</p>
+        <h2 id="titolo-percorsi">Tre regioni, tre percorsi sul mare</h2>
+        <p id="tre-percorsi">Scopri tre itinerari costieri tra borghi, scogliere e natura mediterranea.</p>
       </div>
 
-      <div class="regional-routes-grid">
-        <article class="regional-route-card">
-          <p class="route-region">Campania</p>
+      <div class="lista-percorsi">
+        <article class="scheda-percorso">
+          <p class="regione">Campania</p>
           <h3>Sentiero degli Dei</h3>
           <p>Da Agerola a Nocelle, sopra la Costiera Amalfitana, con viste panoramiche sul mare e sui terrazzamenti.</p>
           <dl>
@@ -65,7 +64,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d12112.155982284665!2d14.512360471328467!3d40.62902197768914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x133b966701a9647b%3A0x409e11f9963d1c0!2sAgerola%2C%20Citt%C3%A0%20Metropolitana%20di%20Napoli!3m2!1d40.6373014!2d14.542328999999999!4m5!1s0x133b97111597403f%3A0x2609e120cedd79b1!2sNocelle%2C%2084017%20SA!3m2!1d40.6293425!2d14.503267999999998!5e0!3m2!1sit!2sit!4v1793450000738!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
           <a
-            class="map-link"
+            class="link-mappa"
             href="https://maps.app.goo.gl/X5cb8DgZsN8nperx7"
             target="_blank"
             rel="noopener noreferrer">
@@ -73,8 +72,8 @@
           </a>
         </article>
 
-        <article class="regional-route-card">
-          <p class="route-region">Liguria</p>
+        <article class="scheda-percorso">
+          <p class="regione">Liguria</p>
           <h3>Camogli, San Fruttuoso e Portofino</h3>
           <p>Un itinerario sul promontorio di Portofino tra macchia mediterranea, borghi marinari e calette.</p>
           <dl>
@@ -85,7 +84,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d22834.095073548073!2d9.162616359957727!3d44.325122550292356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e2!4m5!1s0x12d35f06d691b147%3A0x278fb3ecca72e206!2sParcheggio%20Comunale%20Via%20Ferrari%2C%20Via%20Gio%20Bono%20Ferrari%2C%2016032%20Camogli%20GE!3m2!1d44.346989199999996!2d9.156730999999999!4m5!1s0x12d3600ee36c9a31%3A0x9017606fc71a0bd2!2sPietre%20Strette%2C%2016038%20Santa%20Margherita%20Ligure%20GE!3m2!1d44.3253583!2d9.1757955!4m5!1s0x12d49fc6fc6f4c05%3A0xefd9aab5f00f01db!2sPortofino%2C%2016034%20GE!3m2!1d44.3031559!2d9.2097879!5e0!3m2!1sit!2sit!4v1793452587862!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
           <a
-            class="map-link"
+            class="link-mappa"
             href="https://maps.app.goo.gl/ryCGGK3zLyTXjJjA9"
             target="_blank"
             rel="noopener noreferrer">
@@ -93,8 +92,8 @@
           </a>
         </article>
 
-        <article class="regional-route-card">
-          <p class="route-region">Sardegna</p>
+        <article class="scheda-percorso">
+          <p class="regione">Sardegna</p>
           <h3>Sentiero per Cala Goloritzé</h3>
           <p>Dal Golgo di Baunei alla celebre cala, attraversando il paesaggio selvaggio e calcareo del Supramonte.</p>
           <dl>
@@ -105,7 +104,7 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d29042.13414577708!2d9.669191480732632!3d40.08258573447534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x12de5b25d33b0ab3%3A0xd5dc001c97f06b1e!2sAltopiano%20del%20Golgo%2C%2008040%20Baunei%20OG!3m2!1d40.0802865!2d9.6703336!4m5!1s0x12de5a57bb086adf%3A0xf82e71d83aa551d8!2sCala%20Goloritz%C3%A9!3m2!1d40.1084992!2d9.6893168!5e0!3m2!1sit!2sit!4v1793453194782!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 
           <a
-            class="map-link"
+            class="link-mappa"
             href="https://maps.app.goo.gl/tsbNJn3MpiVnZ86x9"
             target="_blank"
             rel="noopener noreferrer">
@@ -114,15 +113,15 @@
         </article>
       </div>
 
-      <p class="routes-warning">
+      <p class="avviso">
         Prima di partire verifica sempre apertura, accessibilità, condizioni meteo e regolamenti locali.
       </p>
     </section>
   </main>
 
-  <footer class="detail-footer">
+  <footer class="fondo-pagina">
     <p>&copy; 2026 TrekExplore</p>
-    <a href="#top">Torna in alto &uarr;</a>
+    <a href="#inizio">Torna in alto &uarr;</a>
   </footer>
 </body>
 </html>

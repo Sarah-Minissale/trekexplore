@@ -1,79 +1,85 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var loginPanel = document.getElementById("login");
-  var registrationPanel = document.getElementById("registrazione");
-  var showRegistrationButton = document.getElementById("show-registration");
-  var showLoginButton = document.getElementById("show-login");
-  var passwordButtons = document.getElementsByClassName("password-button");
+const login = document.getElementById("login");
+const registrazione = document.getElementById("registrazione");
+const vaiRegistrazione = document.getElementById("vai-registrazione");
+const vaiLogin = document.getElementById("vai-login");
 
-  function showLogin() {
-    registrationPanel.classList.add("is-hidden");
-    loginPanel.classList.remove("is-hidden");
+function mostraLogin() {
+    login.style.display = "block";
+    registrazione.style.display = "none";
     window.location.hash = "login";
-  }
+}
 
-  function showRegistration() {
-    loginPanel.classList.add("is-hidden");
-    registrationPanel.classList.remove("is-hidden");
+function mostraRegistrazione() {
+    login.style.display = "none";
+    registrazione.style.display = "block";
     window.location.hash = "registrazione";
-  }
+}
 
-  if (window.location.hash === "#registrazione") {
-    showRegistration();
-  } else {
-    showLogin();
-  }
+vaiRegistrazione.onclick = mostraRegistrazione;
+vaiLogin.onclick = mostraLogin;
 
-  showRegistrationButton.addEventListener("click", showRegistration);
-  showLoginButton.addEventListener("click", showLogin);
+if (window.location.hash === "#registrazione") {
+    mostraRegistrazione();
+}
 
-  for (var i = 0; i < passwordButtons.length; i++) {
-    passwordButtons[i].addEventListener("click", function () {
-      var targetId = this.getAttribute("data-target");
-      var passwordInput = document.getElementById(targetId);
+const bottonePasswordLogin = document.getElementById("mostra-password-login");
+const passwordLogin = document.getElementById("password-login");
 
-      if (passwordInput.type === "password") {
-        passwordInput.type = "text";
-        this.setAttribute("aria-label", "Nascondi la password");
-      } else {
-        passwordInput.type = "password";
-        this.setAttribute("aria-label", "Mostra la password");
-      }
-    });
-  }
-
-  var loginForm = document.getElementById("login-form");
-  var loginMessage = document.getElementById("login-message");
-
-  loginForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-    loginMessage.className = "form-message success-message";
-    loginMessage.textContent = "Accesso effettuato! Reindirizzamento alla Home Page...";
-
-    window.setTimeout(function () {
-      window.location.href = "../index.php";
-    }, 1500);
-  });
-
-  var registrationForm = document.getElementById("registration-form");
-  var registrationPassword = document.getElementById("registration-password");
-  var confirmPassword = document.getElementById("registration-confirm-password");
-  var registrationMessage = document.getElementById("registration-message");
-
-  registrationForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    if (registrationPassword.value !== confirmPassword.value) {
-      registrationMessage.className = "form-message error-message";
-      registrationMessage.textContent = "Le due password non coincidono.";
-      confirmPassword.focus();
-      return;
+bottonePasswordLogin.onclick = function () {
+    if (passwordLogin.type === "password") {
+        passwordLogin.type = "text";
+        bottonePasswordLogin.innerHTML = "Nascondi";
+    } else {
+        passwordLogin.type = "password";
+        bottonePasswordLogin.innerHTML = "Mostra";
     }
+};
 
-    registrationMessage.className = "form-message success-message";
-    registrationMessage.textContent = "Registrazione avvenuta con successo! Reindirizzamento alla Home Page...";
+const bottonePasswordRegistrazione = document.getElementById(
+    "mostra-password-registrazione",
+);
+const passwordRegistrazione = document.getElementById("password-registrazione");
 
-    window.setTimeout(function () {
-      window.location.href = "../index.php";
-    }, 1500);
-  });
-});
+bottonePasswordRegistrazione.onclick = function () {
+    if (passwordRegistrazione.type === "password") {
+        passwordRegistrazione.type = "text";
+        bottonePasswordRegistrazione.innerHTML = "Nascondi";
+    } else {
+        passwordRegistrazione.type = "password";
+        bottonePasswordRegistrazione.innerHTML = "Mostra";
+    }
+};
+
+const moduloLogin = document.getElementById("modulo-login");
+const messaggioLogin = document.getElementById("messaggio-login");
+
+moduloLogin.onsubmit = function (evento) {
+    evento.preventDefault();
+    messaggioLogin.style.color = "#39735d";
+    messaggioLogin.innerHTML = "Accesso effettuato!";
+
+    setTimeout(function () {
+        window.location.href = "../index.php";
+    }, 1000);
+};
+
+const moduloRegistrazione = document.getElementById("modulo-registrazione");
+const confermaPassword = document.getElementById("conferma-password");
+const messaggioRegistrazione = document.getElementById(
+    "messaggio-registrazione",
+);
+
+moduloRegistrazione.onsubmit = function (evento) {
+    evento.preventDefault();
+
+    if (passwordRegistrazione.value !== confermaPassword.value) {
+        messaggioRegistrazione.innerHTML = "Le password non coincidono.";
+    } else {
+        messaggioRegistrazione.style.color = "#39735d";
+        messaggioRegistrazione.innerHTML = "Registrazione completata!";
+
+        setTimeout(function () {
+            window.location.href = "../index.php";
+        }, 1000);
+    }
+};
